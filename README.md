@@ -1,4 +1,4 @@
-# Skeleton structure for a new Python project with cli
+# deb-packages-tool
 
 This is Python repo template.
 
