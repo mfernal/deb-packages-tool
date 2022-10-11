@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  # Trigger the workflow on push or pull request,
+  # but only for the main branch
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+env:
+  ACR_NAME: wa01acr
+  IMAGE_NAME: <image name>
+jobs:
+  build-image:
+    runs-on: ubuntu-latest
+    steps:
+      # check out a copy of the repository
+      - name: "checkout"
+        uses: actions/checkout@v2
+      - name: "Build and push image"
+        uses: azure/docker-login@v1
+        with:
+          login-server: ${{ env.ACR_NAME }}.azurecr.io
+          username: ${{ secrets.AZURE_APP_ID }}
+          password: ${{ secrets.AZURE_PASSWORD }}
+      - run: |
+          docker build -t ${{ env.ACR_NAME }}.azurecr.io/${{ env.IMAGE_NAME }}:${{ github.run_number }} .
+          docker push ${{ env.ACR_NAME }}.azurecr.io/${{ env.IMAGE_NAME }}:${{ github.run_number }}
+
+
