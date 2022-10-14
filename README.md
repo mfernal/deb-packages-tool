@@ -72,7 +72,7 @@ This will install all the packages specified in the requirement files and will u
 
 ## Docker Image
 
-The image gets built and pushed automatically to the ACR when pushed to GitHub, but for local testing, continue reading.
+For local testing, continue reading.
 
 
 ### Build Image
