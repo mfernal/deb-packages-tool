@@ -8,8 +8,8 @@
             "name": "Python: archivo actual",
             "type": "python",
             "request": "launch",
-            "program": "${file}",
-            "args": ["hello"],
+            "program": "main.py",
+            "args": ["armel"],
             "console": "integratedTerminal",
             "justMyCode": true
         }
