@@ -21,7 +21,7 @@ class Contents:
         exists = [self.arch for architecture in avaible_arch if self.arch == architecture]
         if not exists:
             raise ValueError("The architecture doesn't exist")
-        
+
         content = get(self.url)
         if content.status_code != 200:
             raise HTTPError(content.status_code)

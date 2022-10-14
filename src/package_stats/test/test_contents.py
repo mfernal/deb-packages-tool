@@ -1,6 +1,7 @@
 import pytest
 from src.package_stats.contents import Contents
 
+
 @pytest.fixture
 def contents():
     return Contents("amd64")
