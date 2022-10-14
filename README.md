@@ -16,7 +16,7 @@ You can use the following Debian mirror http://ftp.uk.debian.org/debian/dists/st
 
 ## GitHub Workflow
 
-Defined in [workflow.yaml](.github/workflow/workflow.yaml)
+Defined in [workflow.yaml](.github/workflows/workflow.yaml)
 
 Just change the name of the `<image name>`
 
