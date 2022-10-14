@@ -90,6 +90,3 @@ docker build -t $IMAGE_NAME:$TAG .
 ```bash
 docker run $IMAGE_NAME:$TAG hello
 ```
-# deb-packages-tool
-# deb-packages-tool
-# deb-packages-tool
